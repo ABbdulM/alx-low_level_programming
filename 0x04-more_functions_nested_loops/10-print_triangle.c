@@ -1,24 +1,33 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point.
- *
- * Return: Always 0.
+ * print_triangle - check for a digit
+ * @size : integer type
+ * Return: void
  */
 
-int main(void)
-
+void print_triangle(int size)
 {
-long n, i;
+	int i = 1, ii;
 
-n = 612852475143;
-for (i = 2; i < n; i++)
-{
-while (n % i == 0)
-n = n / i;
-}
+	while (i <= size && size > 0)
+	{
+		ii = 0;
+		while (ii < size - i)
+		{
+			_putchar(' ');
+			ii++;
+		}
+		ii = 0;
+		while (ii < i)
+		{
+			_putchar('#');
+			ii++;
+		}
 
-printf("%lu\n", n);
-
-return (0);
+		_putchar('\n');
+		i++;
+	}
+	if (i == 1)
+		_putchar('\n');
 }
