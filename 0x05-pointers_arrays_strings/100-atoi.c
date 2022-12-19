@@ -6,7 +6,7 @@
  * Return: void.
  */
 
-int _stoi(char *s)
+int _atoi(char *s)
 {
 	int sign;
 	unsigned int num;
